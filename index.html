@@ -176,7 +176,7 @@
             try {
                 const data = JSON.parse(pythonToJson);
                 // Convert to desired format
-                const formattedArray = Object.entries(data).map(([key, value]) => `"-H", "${key}: ${value}"`);
+                const formattedArray = Object.entries(data).map(([key, value]) => `    "-H", "${key}: ${value}"`);
                 formattedJson = `{ \n${formattedArray.join(',\n')} \n}`;
             } catch (e) {
                 formattedJson = 'Invalid JSON data';
